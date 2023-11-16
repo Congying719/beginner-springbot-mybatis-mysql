@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "
+http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.demoboot.mapper.StudentMapper">
+    <select id="findAll" resultType="com.demo.demoboot.entiry.Student">
+        SELECT * FROM student
+    </select>
+
+    <select id="updateNew">
+        UPDATE student SET id=#{id},name=#{name} WHERE id =#{id}
+    </select>
+</mapper>
